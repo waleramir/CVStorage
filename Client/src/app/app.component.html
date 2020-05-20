@@ -21,9 +21,25 @@
         </div>
         <input class="form-control mr-sm-1 w-100 ml-5" type="search" placeholder="Add category..." aria-label="Search">
         <button class="btn btn-danger mr-5" type=" submit ">Add</button>
-        <button type="button" [routerLink]="[{outlets: {'popup': ['login']}}]" routerLinkActive='active' (click)="onSignIn()" class="btn-wrap-text btn btn-dark" style="width: 7rem;">
+        <button type="button" *ngIf="!isUserLoggedIn" [routerLink]="[{outlets: {'popup': ['login']}}]" routerLinkActive='active' (click)="onSignIn()" class="btn-wrap-text btn btn-dark" style="width: 7rem;">
                 Sign in
         </button>
+        <div class="btn-group" *ngIf="isUserLoggedIn">
+            <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+            </button>
+            <div class="dropdown-menu  dropdown-menu-right w-10">
+                <button class="dropdown-item btn-dark" type="button">Profile</button>
+                <button class="dropdown-item btn-dark" type="button">Settings</button>
+                <button class="dropdown-item btn-dark" type="button">Your dataset</button>
+                <div class="dropdown-divider"></div>
+                <button class="dropdown-item btn-danger" href="#" (click)="onLogout()">
+                    Log out
+                 </button>
+            </div>
+        </div>
+
+
     </div>
 </nav>
 

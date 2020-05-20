@@ -4,12 +4,14 @@ import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { LoginComponent } from './user/login/login.component';
 import { AppComponent } from './app.component';
+import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
 
 
 const routes: Routes = [
 
   { path: '', redirectTo: '/app', pathMatch: 'full' },
   { path: 'app', component: AppComponent },
+  { path: 'afterlogtest', component: AfterlogtestComponent },
   {
     path: 'registration',
     component: RegistrationComponent,
@@ -19,7 +21,8 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     outlet: 'popup'
-  },
+  }
+
 ];
 
 @NgModule({

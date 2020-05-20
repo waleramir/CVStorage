@@ -1,14 +1,22 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    
+  }
+
   readonly BaseURI = 'http://localhost:50819/api';
+
+  public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(localStorage.getItem("isloggedin") === "true");
+
+
 
   formModel = this.fb.group({
     UserName: ['', Validators.required],
@@ -38,11 +46,11 @@ export class UserService {
       FullName: this.formModel.value.FullName,
       Password: this.formModel.value.Passwords.Password
     };
-    return this.http.post(this.BaseURI + '/AppUser/Register', body);
+    return this.http.post(this.BaseURI + '/AppUser/register', body);
   }
 
   login(formData) {
-    return this.http.post(this.BaseURI + '/ApplicationUser/Login', formData);
+    return this.http.post(this.BaseURI + '/AppUser/login', formData);
   }
 
   getUserProfile() {

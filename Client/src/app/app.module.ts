@@ -13,6 +13,7 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { UserService } from './shared/user.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './user/login/login.component';
+import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginComponent } from './user/login/login.component';
     UserComponent,
     RegistrationComponent,
     LoginComponent,
+    AfterlogtestComponent,
   ],
   imports: [
     MatDialogModule,

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CVStorage\\Server\\CVStorage\\CVStorage.csproj": {}
+    "D:\\CVStorage\\CVStorage\\Server\\CVStorage\\CVStorage.csproj": {}
   },
   "projects": {
-    "D:\\CVStorage\\Server\\CVStorage\\CVStorage.csproj": {
+    "D:\\CVStorage\\CVStorage\\Server\\CVStorage\\CVStorage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CVStorage\\Server\\CVStorage\\CVStorage.csproj",
+        "projectUniqueName": "D:\\CVStorage\\CVStorage\\Server\\CVStorage\\CVStorage.csproj",
         "projectName": "CVStorage",
-        "projectPath": "D:\\CVStorage\\Server\\CVStorage\\CVStorage.csproj",
+        "projectPath": "D:\\CVStorage\\CVStorage\\Server\\CVStorage\\CVStorage.csproj",
         "packagesPath": "C:\\Users\\waler\\.nuget\\packages\\",
-        "outputPath": "D:\\CVStorage\\Server\\CVStorage\\obj\\",
+        "outputPath": "D:\\CVStorage\\CVStorage\\Server\\CVStorage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -49,12 +49,20 @@
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.1.1, )"
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",

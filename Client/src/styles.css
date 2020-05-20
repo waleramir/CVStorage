@@ -141,3 +141,7 @@ body {
 #toast-container>div {
     opacity: 1;
 }
+
+.navbar-nav .open .dropdown-menu {
+    background-color: #000;
+}
