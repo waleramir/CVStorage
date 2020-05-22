@@ -5,6 +5,7 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { LoginComponent } from './user/login/login.component';
 import { AppComponent } from './app.component';
 import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 const routes: Routes = [
@@ -21,8 +22,12 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     outlet: 'popup'
+  },
+  {
+    path: 'chat',
+    component: ChatComponent,
+    outlet: 'popup'
   }
-
 ];
 
 @NgModule({

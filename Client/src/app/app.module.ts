@@ -14,6 +14,9 @@ import { UserService } from './shared/user.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './user/login/login.component';
 import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
+import { ChatComponent } from './chat/chat.component';
+import { NbThemeModule, NbLayoutModule, NbChatModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
     RegistrationComponent,
     LoginComponent,
     AfterlogtestComponent,
+    ChatComponent,
   ],
   imports: [
     MatDialogModule,
@@ -33,7 +37,8 @@ import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       progressBar: true
-    })
+    }),
+  
   ],
   entryComponents: [
     RegistrationComponent,

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CVStorage.Hubs;
 using CVStorage.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -41,7 +42,14 @@ namespace CVStorage
 
             services.AddSignalR();
 
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder
+                .WithOrigins(Configuration["AppSettings:ClientURL"].ToString())
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+            });
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -62,7 +70,7 @@ namespace CVStorage
             }).AddJwtBearer(x => {
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = false;
-                x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
@@ -80,10 +88,13 @@ namespace CVStorage
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors("CorsPolicy");
+        
 
-            app.UseCors(builder => builder.WithOrigins(Configuration["AppSettings:ClientURL"].ToString())
-                .AllowAnyHeader()
-                .AllowAnyMethod());
+            app.UseSignalR(options =>
+            {
+                options.MapHub<MessageHub>("/chat");
+            });
 
             app.UseAuthentication();
 

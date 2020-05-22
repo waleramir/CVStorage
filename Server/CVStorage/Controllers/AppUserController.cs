@@ -22,10 +22,10 @@ namespace CVStorage.Controllers
         private SignInManager<AppUser> signInManager;
         private readonly AppSettings appSettings;
 
-        public AppUserController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IOptions<AppSettings> appSettings)
+        public AppUserController(UserManager<AppUser> userManager, IOptions<AppSettings> appSettings)
         {
             this.userManager = userManager;
-            this.signInManager = signInManager;
+
             this.appSettings = appSettings.Value;
         }
 
@@ -44,6 +44,7 @@ namespace CVStorage.Controllers
             {
                 var res = await userManager.CreateAsync(appUser, model.Password);
                 return Ok(res);
+
             }
             catch (Exception ex)
             {

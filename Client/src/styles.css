@@ -22,7 +22,7 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
 }
 
 .hovereffect .overlay {
@@ -140,8 +140,4 @@ body {
 
 #toast-container>div {
     opacity: 1;
-}
-
-.navbar-nav .open .dropdown-menu {
-    background-color: #000;
 }

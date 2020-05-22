@@ -51,3 +51,4 @@ D:\CVStorage\CVStorage\Server\CVStorage\obj\Debug\netcoreapp2.1\CVStorage.RazorT
 D:\CVStorage\CVStorage\Server\CVStorage\obj\Debug\netcoreapp2.1\CVStorage.dll
 D:\CVStorage\CVStorage\Server\CVStorage\obj\Debug\netcoreapp2.1\CVStorage.pdb
 D:\CVStorage\CVStorage\Server\CVStorage\obj\Debug\netcoreapp2.1\CVStorage.genruntimeconfig.cache
+D:\CVStorage\CVStorage\Server\CVStorage\obj\Debug\netcoreapp2.1\CVStorage.csproj.CoreCompileInputs.cache

@@ -23,7 +23,7 @@ namespace CVStorage.Controllers
         [HttpGet]
         [Authorize]
         //GET : /api/UserProfile
-        public async Task<Object> GetUserProfile()
+        public async Task<object> GetUserProfile()
         {
             string userId = User.Claims.First(c => c.Type == "UserID").Value;
             var user = await userManager.FindByIdAsync(userId);
