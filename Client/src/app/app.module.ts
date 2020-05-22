@@ -17,6 +17,7 @@ import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
 import { ChatComponent } from './chat/chat.component';
 import { NbThemeModule, NbLayoutModule, NbChatModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     LoginComponent,
     AfterlogtestComponent,
     ChatComponent,
+    ImageComponent,
   ],
   imports: [
     MatDialogModule,

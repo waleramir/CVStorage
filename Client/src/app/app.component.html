@@ -38,119 +38,16 @@
         <button type="button" *ngIf="!isUserLoggedIn" [routerLink]="[{outlets: {'popup': ['login']}}]" routerLinkActive='active' (click)="onSignIn()" class="btn-wrap-text btn btn-dark" style="width: 7rem;">
                 Sign in
         </button>
-
-
-
     </div>
 </nav>
 
-
-
 <div class="container w-100">
     <div class="card-columns  no-gutter-card-deck">
-        <div class="card w-75 ">
+        <div class="card w-75 " *ngFor="let image of images" (click)="onShowImage(image)" [routerLink]="[{outlets: {'popup': ['image']}}]" routerLinkActive='active'>
             <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/6.jpg " alt="Card image cap ">
+                <img class="card-img-top mw-25 " src={{image}} alt="Card image cap ">
             </div>
         </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/6.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/6.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/2.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/3.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/4.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/5.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/17.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/7.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/8.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/9.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/10.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/11.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/12.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/13.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/14.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/15.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/16.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/17.jpg " alt="Card image cap ">
-            </div>
-        </div>
-        <div class="card w-75 ">
-            <div class="hovereffect ">
-                <img class="card-img-top mw-25 " src="../assets/Images/18.jpg " alt="Card image cap ">
-            </div>
-        </div>
-
-
-
     </div>
 </div>
 

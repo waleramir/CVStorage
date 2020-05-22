@@ -6,6 +6,7 @@ import { LoginComponent } from './user/login/login.component';
 import { AppComponent } from './app.component';
 import { AfterlogtestComponent } from './afterlogtest/afterlogtest.component';
 import { ChatComponent } from './chat/chat.component';
+import { ImageComponent } from './image/image.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'chat',
     component: ChatComponent,
+    outlet: 'popup'
+  },
+  {
+    path: 'image',
+    component: ImageComponent,
     outlet: 'popup'
   }
 ];
